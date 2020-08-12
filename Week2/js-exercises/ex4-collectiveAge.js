@@ -10,10 +10,13 @@
  Avoid using for loop or forEach.
  */
 
-function collectiveAge(people) {
-  //map to get the individual ages and reduce to sum it all up
-  const totalAge = people.map(people => people.age).reduce((a, b) => a + b, 0);
-  return totalAge;
+function getCollectiveAge(members) {
+  //get the age of each member
+  const memberAge = members.map(members => members.age);
+  //add all ages together
+  const addAllAges = memberAge.reduce((a, b) => a + b, 0);
+  
+  return addAllAges;
 }
 
 const hackYourFutureMembers = [{
@@ -34,7 +37,5 @@ const hackYourFutureMembers = [{
   },
 ];
 
-//is this what you meant by "It should contain a function that takes a callback"?s
-const collectiveMembers = collectiveAge;
 
-console.log("The collective age of the HYF team is: " + collectiveMembers(hackYourFutureMembers));
+console.log("The collective age of the HYF team is: " + getCollectiveAge(hackYourFutureMembers));

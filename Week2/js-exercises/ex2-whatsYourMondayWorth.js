@@ -13,12 +13,14 @@
  */
 
 function dayWorth(tasks, hourlyRate) {
-  
-  const totalHours = tasks.map(task => task.duration /60).reduce((a, b) => a + b, 0);//convert the minutes to hours and sum it all up
-  
-  const totalPay =  (totalHours * hourlyRate);
-  
-  return (new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' }).format(totalPay));//format totalPay as a currency amount with rounded cents
+  //convert minutes to hours 
+  const minsToHoursConverter = tasks.map(task => task.duration /60);
+  //sum all hours 
+  const sumAllHours = minsToHoursConverter.reduce((a, b) => a + b, 0);
+  //multiply total hours by hourly rate
+  const totalPayPerDay =  (sumAllHours * hourlyRate);
+  //format totalPay as a currency amount with rounded cents
+  return (new Intl.NumberFormat('nl-NL', { style: 'currency', currency: 'EUR' }).format(totalPayPerDay));
   
 }
 
@@ -41,7 +43,7 @@ const mondayTasks = [{
 ];
 
 //make sure the function takes other arrays
-const fridayTasks = [{
+const tuesdayTasks = [{
   name: 'task 1',
   duration: 120, // specified in minutes
 },
@@ -61,4 +63,4 @@ const fridayTasks = [{
 
 console.log(dayWorth(mondayTasks, 25));
 console.log(dayWorth(mondayTasks, 13.37));
-console.log(dayWorth(fridayTasks, 13.37));
+console.log(dayWorth(tuesdayTasks, 13.37));

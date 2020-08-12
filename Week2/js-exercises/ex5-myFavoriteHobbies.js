@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  
  ** Exercise 5: My favorite hobbies **
@@ -8,24 +10,33 @@
  Put the list items in an unordered list
  */
 
+ //Problem: output myHobbies into an HTML file and showcase in a webpage
+ //2. use map/forEach to put each hobby list into a list item
+ //3. Put the list items in an unordered list
 
-
-function createHTMLList(arr) {
+function addMyHobbiesIntoHTML(myHobbies) {
   
-  arr.forEach(function (item){
-    const li = document.createElement('li');
-    ul.appendChild(li);
+  //create <ul>
+  const unorderedHobbiesList = document.createElement("ul");
+  //add <ul> to the DOM
+  document.body.appendChild(unorderedHobbiesList);
 
-    return li.innerHTML = item;
+  //create a <li> and append it to <ul>
+  function addHobbyToListItem(hobby) {
+    //create <li>
+    const listItemHobbies = document.createElement("li");
+    //manipulate the content of <li> to be a hobby
+    listItemHobbies.innerHTML = hobby;
+    //append <li> to <ul>
+    unorderedHobbiesList.appendChild(listItemHobbies);
+    return;
+  };
 
-  });
-  
-}
+  //iterate through the array
+  myHobbies.map(addHobbyToListItem);
+  return;
 
-ul = document.createElement('ul');
-document.body.appendChild(ul);
-
-
+};
 
 const myHobbies = [
   'Meditation',
@@ -35,4 +46,5 @@ const myHobbies = [
   'Going to the gym',
 ];
 
-console.log(createHTMLList(myHobbies));
+console.log(addMyHobbiesIntoHTML(myHobbies));
+
