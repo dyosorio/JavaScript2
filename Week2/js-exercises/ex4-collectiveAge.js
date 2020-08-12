@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  
  ** Exercise 4: Collective age **
@@ -9,7 +11,9 @@
  */
 
 function collectiveAge(people) {
-  // return the sum of age for all the people
+  //map to get the individual ages and reduce to sum it all up
+  const totalAge = people.map(people => people.age).reduce((a, b) => a + b, 0);
+  return totalAge;
 }
 
 const hackYourFutureMembers = [{
@@ -29,5 +33,8 @@ const hackYourFutureMembers = [{
     age: 22
   },
 ];
+
+//is this what you meant by "It should contain a function that takes a callback"?s
+const collectiveMembers = collectiveAge;
 
 console.log("The collective age of the HYF team is: " + collectiveMembers(hackYourFutureMembers));

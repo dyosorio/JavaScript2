@@ -1,3 +1,4 @@
+'use strict';
 /**
  
  ** Exercise 3: Lemon allergy **
@@ -13,7 +14,10 @@
 
 
 function takeOutLemons(basket) {
-  // your code goes in here. The output is a string 
+  //filter lemons out
+  const lemonsOut = fruitBasket.filter(fruit  => fruit !== "Lemon")
+  return `My mom bought me a fruit basket, containing ${lemonsOut.join(", ")} !`;
+
 }
 
 const fruitBasket = ['Apple', 'Lemon', 'Grapefruit', 'Lemon', 'Banana', 'Watermelon', 'Lemon'];
