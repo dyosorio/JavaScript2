@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background: #e74c3c;
+    color: #f7f1e3;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+    /*border: green solid 2px;*/
+    width: 70%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.session-length { /*top container inside the main container*/
+    /*border: yellow solid 2px;*/
+    width: 100%;
+}
+
+.session-length p{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.time-set-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.time-set-container p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fbc531;
+    width: 4rem;
+}
+
+.time-set-container i{
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.time-set-container i:hover{
+    color: #0be881;
+    cursor: pointer;
+}
+
+.main-container h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.timer {/*middle container inside the main container*/
+    border: #f7f1e3 solid 2px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timer p{
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 2rem;
+}
+
+.countdown-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-container p{
+    color: #fbc531;
+    font-size: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.buttons{/*bottom container inside the main container*/
+    /*border: magenta solid 2px;*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.buttons i{
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.buttons i:hover{
+    color: #0be881;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-container {
+        width: 100%;
+    }
+  }
