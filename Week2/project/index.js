@@ -11,9 +11,6 @@
  * 
  */
 
-
-//increase or decrease the session length with up and down
-
 //find and store the elements we want to manipulate
 const buttonDown = document.getElementById("decrease");
 const buttonUp = document.getElementById("increase");
@@ -27,10 +24,10 @@ countdownEl.innerHTML = `${initValue}:00`;
 inputTime.innerHTML = initValue;
 
 let startingMinutes = initValue;
-let running = false;
+
 
 function setCountDownTimer() {
-  
+  let running;
   let time = startingMinutes * 60; 
 
   function updateCountdown() {
@@ -50,33 +47,27 @@ function setCountDownTimer() {
 
     if (time !== 0){
       running = true;
-      console.log(running);
     } else {
       running = false;
-      console.log(running);
-      //how do I stop the interval from here without clicking on pause
     }
-
   }
 
-  console.log(running + ' general');
-  
   let startInterval;
-  let stopInterval;
 
   //play
   playButton.addEventListener("click", function() {
     startInterval = setInterval(updateCountdown, 1000);
     running = true;
-    console.log(running + ' play')
-  },  /*{once : true}*/);
+  });
 
+  if(running = false){
+    clearInterval(startInterval);
+  }
 
   //pause
   pauseButton.addEventListener("click", function() {
-  stopInterval = clearInterval(startInterval);
+  clearInterval(startInterval);
   running = false;
-  console.log(running + ' pause');
   });
   
 }
