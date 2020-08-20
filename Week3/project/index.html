@@ -4,11 +4,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/fe89cf6951.js" crossorigin="anonymous"></script>
   <title>Tip Calculator</title>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app" class="main-container">
+    
+    <h1 class="heading">Tip Calculator <span><i class="far fa-money-bill-alt"></i></span></h1>
+
+    <div class="calculator-container">
+
+      <div class="input-bill">
+        <p>How much was your bill?</p>
+        <div>
+          <label for="currency" class="label-euro"><i class="fas fa-euro-sign"></i></label>
+          <input type="number" id="currency" min="0" placeholder="0.00">
+        </div>
+      </div>
+
+      <div class="input-service">
+        <p>How was your service?</p>
+        <label for="qualityOfService"></label>
+        <select id="qualityOfService">
+          <option disabled selected>Choose an option...</option>
+          <option value="30">30% - Outstanding</option>
+          <option value="20">20% - Good</option>
+          <option value="15">15% - Okay</option>
+          <option value="10">10% - Bad</option>
+          <option value="5">5% - Terrible</option>
+        </select>
+      </div>
+
+      <div class="input-shareTip">
+        <p>How many people are sharing the bill?</p>
+        <div>
+          <label for="shareBill"><i class="fas fa-user-friends"></i></label>
+          <input type="number" id="shareBill" min="1" placeholder="2">
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button type="submit" id="calculate">Calculate!</button>
+      </div>
+      
+    </div>
+
+  </div>
+
+  <footer>
+    <p>by Danny Osorio 
+      <a href="https://github.com/dyosorio" target="_blank"><i class="fab fa-github"></i></a> 
+      <a href="https://codepen.io/danny-osorio" target="_blank"><i class="fab fa-codepen"></i></a>
+    </p>
+  </footer>
+
   <script src="index.js"></script>
 </body>
 

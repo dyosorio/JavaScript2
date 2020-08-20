@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap');
+
+body {
+    background-color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container{
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+}
+
+.heading{
+    text-align: center;
+}
+
+.calculator-container{
+    background-color: #ECECEC;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.input-bill,
+.input-service,
+.input-shareTip,
+.button-container {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-bill div,
+.input-shareTip div {
+    display:flex;
+    width: 100%;
+    height: 2rem;
+}
+
+.input-bill div input,
+.input-shareTip div input,
+.input-service select{
+    width: 100%;
+    border-style: none;
+    border-radius: 0 5px 5px 0;
+    padding-left: 1rem;
+    color: #676767;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.input-service select{
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.input-bill div label,
+.input-shareTip div label{
+    background-color: #05c46b;
+    padding: .5rem 1.5rem;
+    border-radius: 5px 0 0 5px;
+}
+
+i {
+    color: #1e272e;
+}
+
+button{
+    background-color: #ff7979;
+    border: none;
+    height: 2.5rem;
+    font-weight: 600;
+    color: #1e272e;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #eb4d4b;
+    color: #fff;
+}
+
+button:focus{ outline: none;
+}
+
+.fa-github,
+.fa-codepen{
+    margin: .5rem;
+    font-size: 1.8rem;
+}
+
+.fa-github:hover,
+.fa-codepen:hover{
+    color: #05c46b;
+}
+
+footer p{
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Media query */
+@media only screen and (max-width: 600px) {
+    .main-container {
+        width: 100%;
+    } 
+}
