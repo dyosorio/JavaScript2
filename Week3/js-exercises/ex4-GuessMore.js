@@ -1,11 +1,6 @@
-/**
 
-** Exercise 4: Guess more **
-
-Look at the bellow code snippet.
-Can you guess the output? 
-Write out your reasoning in 50 words or less.
-
+/* Exercise 4: Guess more **
+guess the output
 */
 
 const x = 9;
@@ -15,6 +10,8 @@ function f1(val) {
   return val;
 }
 f1(x);
+
+//Output is 9 because the method log() is called in the global scope, where x = 9
 console.log(x);
 
 const y = {
@@ -23,7 +20,10 @@ const y = {
 
 function f2(val) {
   val.x = val.x + 1;
-  return val;
+  return val; //returns 10
 }
+
 f2(y);
+
+//Outputs the value of y in the global scope. The value of 'y' was modify inside the function local scope only.
 console.log(y);
