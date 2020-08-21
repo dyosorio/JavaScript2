@@ -18,12 +18,15 @@ const y = {
   x: 9
 };
 
+console.log(y); //see x value before the function
+
 function f2(val) {
   val.x = val.x + 1;
   return val; //returns 10
 }
 
-f2(y);
+f2(y); 
 
-//Outputs the value of y in the global scope. The value of 'y' was modify inside the function local scope only.
-console.log(y);
+//Outputs the object 'y'. As a property of 'y', the value of x will be 10 because it was modify inside the function f2. 
+
+console.log(y); //see x value after the function
