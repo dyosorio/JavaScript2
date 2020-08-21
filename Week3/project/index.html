@@ -14,7 +14,7 @@
     
     <h1 class="heading">Tip Calculator <span><i class="far fa-money-bill-alt"></i></span></h1>
 
-    <div class="calculator-container">
+    <div class="calculator-container" id="calculator">
 
       <div class="input-bill">
         <p>How much was your bill?</p>
@@ -28,7 +28,7 @@
         <p>How was your service?</p>
         <label for="qualityOfService"></label>
         <select id="qualityOfService">
-          <option disabled selected>Choose an option...</option>
+          <option value="0" disabled selected>Choose an option...</option>
           <option value="30">30% - Outstanding</option>
           <option value="20">20% - Good</option>
           <option value="15">15% - Okay</option>
@@ -41,7 +41,7 @@
         <p>How many people are sharing the bill?</p>
         <div>
           <label for="shareBill"><i class="fas fa-user-friends"></i></label>
-          <input type="number" id="shareBill" min="1" placeholder="2">
+          <input type="number" id="shareBill" min="1" placeholder="0">
         </div>
       </div>
 

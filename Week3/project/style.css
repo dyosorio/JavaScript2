@@ -22,6 +22,7 @@ body {
     background-color: #ECECEC;
     margin: 1rem;
     padding: 1rem;
+    padding-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,7 +80,6 @@ button{
     border: none;
     height: 2.5rem;
     font-weight: 600;
-    color: #1e272e;
     font-size: 1.5rem;
     border-radius: 5px;
     font-family: 'Quicksand', sans-serif;
